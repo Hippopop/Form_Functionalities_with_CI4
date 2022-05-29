@@ -1,58 +1,114 @@
-*{
-    margin: 0;
-    padding: 0;
+:root {
+--color_one : #00010D;
+--color_two : #012340;
+--color_three : #2F5973;
+--color_three_faded : #2f5973e1;
+--color_four : #F2C094;
+--color_five : #F29D7E;
 }
 
-.form_body {
-    min-height: 80vh;
-    display: flex;
-    /* align-items: center; */
-    justify-content: center;
 
-    background-color: darkcyan;
-    border-radius: .8rem;
-    margin: 12px;
-    overflow: hidden;
-    width: 100%;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color_two);
+
 }
 
 .vspace {
     height: 8px;
 }
-
-.form_field {
-    background-color: burlywood;
-    border-radius: .4rem;
-    padding: 8px;
-    margin: 12px;
-    min-height: 50px;
-    /* display: flex;
-    justify-content: space-around; */
-    box-shadow: 10px 10px 8px #888888;
+.hspace {
+    width: 8px;
 }
 
-.form {
-    flex: 1;
+.main_body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_body {
     min-height: 80vh;
+    min-width: 80%;
+    display: inline-flex;
+    justify-content: center;
+    background-color: var(--color_three_faded);
+    border-radius: .8rem;
+    margin: 12px 12px;
+    overflow: hidden;
+    box-shadow: 3px 5px 25px #a5a3a385;
+}
+
+form {
+    height: 100%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    background-color: darkcyan;
     border-radius: .8rem;
     margin: 12px;
 }
 
-.image {
-    flex: 1;
-    background: #888888 url("../../Assets/Images/form_image.jpg") repeat 0;
-    display: block;
-    min-height: 100%;
-    min-width: 50%;
-    /* background-image: url("../../Assets/Images/form_image.jpg"); */
+.form {
+       width: 100%;
+    }
+
+.form_field {
+    background-color: var(--color_five);
+    border-radius: .4rem;
+    padding: 12px;
+    margin: 12px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 3px 5px 1px #33333385;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
-span {
-    color: rgb(247, 0, 0);
+
+input[type=text] {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: white;
+    border-radius: .3rem;
+    min-width: 225px;
+    min-height: 18px;
+    margin: 5px;
+  }
+
+  ::placeholder {
+    color: grey;
+    text-align: center;
+  }
+
+
+.image {
+    flex: 1;
+    background: url("../../Assets/Images/form_image.jpg") repeat 0;
+    background-size: cover;
+    display: block;
+    min-width: 50%;
+}
+
+.form_button {
+    background: var(--color_five);
+    color: white;
+    border-style: outset;
+    border-color: var(--color_one);
+    height: 50px;
+    width: 100px;
+    font: bold15px arial,sans-serif;
+    text-shadow: none;
+    border-radius: .4rem;
+    }
+
+.button_set {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }

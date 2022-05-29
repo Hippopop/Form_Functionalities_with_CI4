@@ -5,11 +5,13 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\UserModel;
 
+
 class FormController extends Controller
 {
     public function __construct()
     {
         helper('form');
+        helper('auth_helper.php');
     }
 
     public function index()
@@ -51,6 +53,11 @@ class FormController extends Controller
             }
         } else {
             $all_data['e'] = $this->validator;
+        }
+
+        $client = getClient();
+        if (!session()->get('user_token')) {
+            $all_data['google'] = getClient()->createAuthUrl();
         }
         return view('form/user_form', $all_data);
     }

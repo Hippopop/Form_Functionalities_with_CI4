@@ -1,0 +1,7 @@
+{
+    "name": "google/authorization",
+    "description": "A library that helps you authorise with gmail.",
+    "require": {
+        "google/apiclient": "2.12.1"
+    }
+}
